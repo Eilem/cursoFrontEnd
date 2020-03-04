@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EstiloUx</title>
+
+    <style>
+        /* 
+        * definindo que todo o conteudo e suas bordas terão o tamanho definido exatamente de acordo com o width e heigth 
+         */
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        div {
+            background-color:  gray;
+            color: white;
+        } 
+
+        #cabecalho{
+            padding-right: 10%;
+            padding-left: 10%;
+        }
+
+        h1{
+            display: inline-block;
+            text-align: left;
+            width:  20% ;
+
+            /* border: 1px solid white; */
+        }   
+
+        #menu{
+            display: inline-block;
+            width: 75%;
+            text-align: right;
+            
+            /* border: 1px solid red; */
+        }
+
+        a{
+            display: inline-block;
+            width:  100px ;
+            color: white;
+            text-decoration: none;
+
+            /* declaração sentido horário */
+            padding-top:20px;
+            padding-right:20px;
+            padding-left:20px;
+            padding-bottom:20px;
+            text-align: center;
+
+            /* border: 1px solid white; */
+        }      
+
+        /* p{
+            display: block;
+            border: 1px solid black;
+            width: 50%;
+        }  */
+
+        p{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: salmon;
+            color: #ffffff;
+        
+            border: 5px solid black;
+            /* padding-top: 10px ; */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div id="cabecalho">
+        <h1>EstiloUx</h1>
+
+        <div id="menu">
+            <a href="">Home</a>
+            <a href="">Sobre</a>
+            <a href="">Contato</a>
+        </div>
+    </div>
+
+    <!-- teste border box -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam inventore. Quis!</p>
+
+    <p> Lorem ipsum nobis quo, voluptate sint quod sed necessitatibus eaque assumenda vel nihil. Quis!</p>
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odit minus, quisquam culpa molestiae enim! Dolor at ipsa provident neque quisquam, harum ullam inventore tempore unde facere incidunt eius adipisci.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odit minus, quisquam culpa molestiae enim! Dolor at ipsa provident neque quisquam, harum ullam inventore tempore unde facere incidunt eius adipisci.</p> -->
+</body>
+</html>
