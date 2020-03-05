@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,73 +11,99 @@
         /* 
         * definindo que todo o conteudo e suas bordas terão o tamanho definido exatamente de acordo com o width e heigth 
          */
-         *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-         }
+        }
 
-        div {
-            background-color:  gray;
+        body{
+            background-color: #efefef;
+            font-family: sans-serif;
+            font-weight: 100;
+            color: rgb(128, 125, 125);
+        }
+
+        #cabecalho {
+            background-color: gray;
             color: white;
-        } 
-
-        #cabecalho{
             padding-right: 10%;
             padding-left: 10%;
         }
 
-        h1{
+        h1 {
             display: inline-block;
             text-align: left;
-            width:  20% ;
+            width: 20%;
 
             /* border: 1px solid white; */
-        }   
+        }
 
-        #menu{
+        #menu {
             display: inline-block;
-            width: 75%;
+            width: 70%;
             text-align: right;
-            
+
             /* border: 1px solid red; */
         }
 
-        a{
+        a {
             display: inline-block;
-            width:  100px ;
+            width: 100px;
             color: white;
             text-decoration: none;
 
             /* declaração sentido horário */
-            padding-top:20px;
-            padding-right:20px;
-            padding-left:20px;
-            padding-bottom:20px;
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
             text-align: center;
 
-            /* border: 1px solid white; */
-        }      
-
-        /* p{
-            display: block;
-            border: 1px solid black;
-            width: 50%;
-        }  */
-
-        p{
-            display: inline-block;
-            width: 150px;
-            height: 150px;
-            background-color: salmon;
-            color: #ffffff;
-        
-            border: 5px solid black;
-            /* padding-top: 10px ; */
         }
 
+        #corpo-documento {
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
+            margin-top: 2%;
+        }
+
+        #conteudo {
+            display: inline-block;
+            width: 70%;
+            vertical-align: top;
+            background-color: #e6e1e1;
+            margin-right: -4px;
+        }
+
+        #banner {
+            width: 100%;
+
+        }
+
+        #conteudo h2 {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+        #conteudo p {
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 3%;
+        }
+
+        #barra-lateral {
+            display: inline-block;
+            width: 30%;
+            background-color: #e6e1e1;
+            margin-right: -4px;
+            vertical-align: top;
+
+        }
     </style>
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <div id="cabecalho">
@@ -89,12 +116,39 @@
         </div>
     </div>
 
-    <!-- teste border box -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam inventore. Quis!</p>
 
-    <p> Lorem ipsum nobis quo, voluptate sint quod sed necessitatibus eaque assumenda vel nihil. Quis!</p>
+    <div id='corpo-documento'>
 
-    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odit minus, quisquam culpa molestiae enim! Dolor at ipsa provident neque quisquam, harum ullam inventore tempore unde facere incidunt eius adipisci.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odit minus, quisquam culpa molestiae enim! Dolor at ipsa provident neque quisquam, harum ullam inventore tempore unde facere incidunt eius adipisci.</p> -->
+        <div id="conteudo">
+            <img id="banner" src="./lapis-de-cor.png" alt="Aquarela de lápis de cor">
+
+            <h2> Cores com harmonia</h2>
+
+            <p>
+                Entenda como fazer combinações de cores que fazem sentido para sua identidade visual  
+            </p>
+
+            <p> Mussum Ipsum, cacilds vidis litro abertis. Detraxit consequat et quo num tendi nada. Cevadis im ampola
+                pa arma uma pindureta. Sapien in monti palavris qui num significa nadis i pareci latim. Paisis, filhis,
+                espiritis santis.
+            </p>
+            <p>
+                Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem
+                dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro
+                do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.
+            </p>
+            <p>
+                Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das
+                professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura
+                oculta, que é um cachorro atrás. O que é algo muito importante!
+            </p>
+        </div>
+        <div id="barra-lateral">
+            Barra lateral
+        </div>
+    </div>
+
+
 </body>
+
 </html>
