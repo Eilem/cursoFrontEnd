@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Estilo Ux</title>
+
+    <style>
+        /* Reset de página/propriedades */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #efefef;
+            font-family: sans-serif;
+            font-weight: 100;
+            color: #858585;
+        }
+
+        #cabecalho {
+            background-color: #727272;
+            color: white;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        h1 {
+            display: inline-block;
+            width: 10%;
+            line-height: 30px;
+            /* color: transparent; */
+            /* background-image: linear-gradient(to right, #e0e0e0, #e0e0e0,#a273a2); */
+            /* -webkit-background-clip: text; */
+            /* background-clip: text; */
+            /* -webkit-text-fill-color: transparent; */
+
+        }
+
+        #menu {
+            width: 80%;
+            text-align: right;
+            display: inline-block;
+            /* border: 1px solid white; */
+        }
+
+        a {
+            display: inline-block;
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            /* border: 1px solid white; */
+        }
+
+        #corpo-documento {
+
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 20px;
+        }
+
+        #conteudo {
+            display: inline-block;
+            margin-right: -4px;
+            vertical-align: top;
+            width: 70%;
+            background-color: white;
+
+        }
+
+        #conteudo h2 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        #conteudo p {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 20px;
+
+        }
+
+        #barra-lateral {
+            display: inline-block;
+            margin-right: -4px;
+            vertical-align: top;
+            width: 27%;
+            margin-left: 3%;
+            height: 100%;
+
+
+        }
+
+        #lapis {
+            width: 100%;
+        }
+
+        .box-side {
+            margin-bottom: 20px;
+            background-color: white;
+            padding-bottom: 20px;
+        }
+
+        .box-side h3 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 200;
+            margin-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .box-side input {
+            height: 30px;
+            width: 130px;
+            margin-left: 10px;
+            border: 1px solid #efefef;
+        }
+
+        .box-side button {
+            width: 55px;
+            height: 30px;
+            margin-left: 10px;
+            background-color: #727272;
+            color: white;
+            border: 1px solid #efefef;
+        }
+
+        .box-side ul li {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 30px;
+        }
+
+        .box-side p {
+            padding-left: 15px;
+            padding-right: 15px;
+            line-height: 25px;
+            text-align: center;
+        }
+        .box-side #email-novidade {
+            width: 100%;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <div id="cabecalho">
+        <h1>EstiloUx</h1>
+
+        <div id="menu">
+            <a href="">Home</a>
+            <a href="">Sobre algo</a>
+            <a href="">Contato</a>
+        </div>
+    </div>
+
+    <!-- CORPO DO DOCUMENTO -->
+    <div id="corpo-documento">
+        <!-- Conteúdo Principal -->
+        <div id="conteudo">
+            <img id="lapis" src="./lapis-de-cor.png" alt="">
+
+            <h2>Cores com harmonia</h2>
+
+            <p>Entenda como fazer combinações de cores que fazem sentidopara a sua identidade visual</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime modi dolores, possimus voluptatibus
+                corporis eaque quas beatae id magnam voluptatum, accusamus officia consectetur assumenda? Tempora
+                deserunt perferendis perspiciatis necessitatibus quos?</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis molestias ipsum exercitationem, nam
+                esse, animi natus veritatis nobis aut sit maxime, rem sapiente in dignissimos! Doloribus, quasi neque!
+                Necessitatibus, nobis.</p>
+        </div>
+        <!-- Barra Lataral -->
+        <div id="barra-lateral">
+            <div id="busca" class="box-side">
+                <h3>Busca</h3>
+                <input type="text">
+                <button>Pesquisar</button>
+            </div>
+
+            <div id="posts" class="box-side">
+                <h3>Posts Anteriores</h3>
+
+                <ul>
+                    <li>Dicas para melhorar a usabilidade de sua página</li>
+                    <li>Como identificar erros em uma composição visual</li>
+                    <li>Cores com harmonia</li>
+                    <li>7 Hacks e dicas do Ilustrator que você precisa conhecer!</li>
+                </ul>
+            </div>
+
+            <div id="novidade" class="box-side">
+                <h3>Increva-se</h3>
+                <p>Receba novidades do site em seu e-mail! Basta adicionar seu e-mail abaixo!</p>
+                <input type="text" id="email-novidade">
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
