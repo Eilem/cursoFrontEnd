@@ -21,7 +21,7 @@
             background-color: #efefef;
             font-family: sans-serif;
             font-weight: 100;
-            color: #858585;
+            color: #646262;
         }
 
         #cabecalho {
@@ -36,7 +36,6 @@
             text-align: left;
             width: 20%;
             vertical-align: middle;
-
             /* border: 1px solid white; */
         }
 
@@ -44,7 +43,6 @@
             display: inline-block;
             width: 70%;
             text-align: right;
-
             /* border: 1px solid red; */
         }
 
@@ -59,7 +57,6 @@
             padding-left: 20px;
             padding-bottom: 20px;
             text-align: center;
-
         }
 
         #corpo-documento {
@@ -79,7 +76,6 @@
 
         #banner {
             width: 100%;
-
         }
 
         #conteudo h2 {
@@ -101,7 +97,6 @@
             margin-right: -4px;
             margin-left: 3%;
             vertical-align: top;
-
         }
        
         #buscar h3{
@@ -113,33 +108,30 @@
             border-bottom: 1px solid #efefef ;
         }
         
-        #buscar{
+        /* #buscar{
             background-color: #ffffff;
             border-bottom : 1px solid #efefef;
             padding-bottom: 20px;
-        }
+        } */
         
         #buscar input {
             height: 25px ;
             width: 60% ;
             margin-left: 2% ;
             border-bottom : 1px solid #efefef;
-            
-        }
-       
-        #buscar button {
-            height: 25px ;
-            width: 30% ;
-            margin-left: 2%;
-            background-color: #727272;
-            color: cornsilk;
-            border-bottom : 1px solid #efefef;
-        }
-
+        }          
 
         .box-side{
             background-color: #ffffff;
             padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+       
+        .box-side #input-inscrever{
+            height: 25px ;
+            width: 95% ;
+            margin-left: 2%;
+            border-bottom : 1px solid #efefef;
         }
 
         .box-side h3{
@@ -148,8 +140,36 @@
             padding-top: 10px;
             padding-bottom: 10px;
             font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 200;
             border-bottom: 1px solid #efefef ;
         }
+
+        .box button {
+            height: 25px ;
+            width: 30% ;
+            margin-left: 2%;
+            background-color: #727272;
+            color: cornsilk;
+            border-bottom : 1px solid #efefef;
+        }
+
+        .box-side ul li{
+            margin-left:10%;
+            margin-right:10%;
+            /* margem de baixo */
+            margin-bottom: 1%; 
+        }
+       
+        .box-side p{
+            margin-left:10%;
+            margin-right:10%;
+            /* margem de baixo */
+            margin-bottom: 1%; 
+            text-align: center;
+        }
+
+        box-side 
 
     </style>
 </head>
@@ -194,9 +214,8 @@
         </div>
 
         <div id="barra-lateral">
-            <div id=buscar>
-                <h3 id=titulo_buscar>Buscar</h3>
-                <hr/>
+            <div id=buscar class="box-side">
+                <h3 id=titulo_buscar  class="box-side">Buscar</h3>
                 <input id='input_busca' type="text">
                 <button type="submit" > 
                    Pesquisar</i>
@@ -205,13 +224,18 @@
 
             <div id="post" class="box-side">
                 <h3 class="box-side" >Posts Anteriores</h3>
-                <hr/>
-               <ul class="box-side">
-                   <li>Dicas</li>
+                <ul class="box-side">
+                   <li>Dicas diconas diquinhas </li>
                    <li>Como</li>
                    <li>Sono</li>
                    <li> etc</li>
                </ul>
+            </div>
+
+              <div id=inscrever class="box-side">
+                <h3 class="box-side">inscreva-se</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam ullam molestias quod asperiores expedita eius, recusandae esse, minima aliquid alias inventore!</p>
+                <input id="input-inscrever" class="box-side" type="text">
             </div>
         </div>
 
