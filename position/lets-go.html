@@ -16,29 +16,64 @@
             /* border: 10px solid black; */
         }
         body{
-            /* background-color: lightslategray; */
             /* border: 10px dotted lightgoldenrodyellow; */
-            color:white;
-            height: 100%;    
-            /* background-image: url("./background.jpg"); */
+            background-image: url("./background.jpg");
+            background-color: lightslategray; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:white; 
+            
         }
 
         #form-container{
             position: fixed;
-            left: calc(501% - 400px);
+            left: calc(50% - 400px);
             top: calc(50% - (350px/2));
             width: 800px;
             height: 350px;
             border: 1px solid green ;
+            background-color: black;
+            opacity: 75%;        
+        }
+
+        .linha{
+
+        }
+
+        .forgot-login{
+
         }
     
     </style>
 </head>
 <body>
     <div>
-        <!-- <img src="./background.jpg" alt="Outono"> -->
         <main id="form-container">
+            <div id=signup>
+                <h1>Por quê fazer uma conta?</h1>
+                <p>Por que sim Zequinha!!</p>
+                <a href="">
+                    SIGN UP
+                </a>
+            </div>
+            <div>
+                <form action="">
+                    <h1>Log IN</h1>
+                    <div class="linha">
+                        <input type="email" name="email" id="email" placeholder="Email">  
+                    </div>
 
+                    <div class="linha">
+                        <input type="password" name="senha" id="senha" placeholder="Password">
+                    </div>
+
+                    <div class="forgot-login">
+                        <button>Esqueceu a senha?</button>
+                        <button>Log in</button>
+                    </div>
+
+                </form>
+            </div>
         </main>
     </div>
 </body>
