@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário Position </title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        #paragrafo-fixo {
+            display: inline-block;
+            position: fixed;
+            
+            /* top  ou botton*/
+            top: 50%;
+            /* bottom: -50px; */
+
+            /* right ou left*/
+            left: 50%;
+            /* right: 50%; */
+
+
+            margin-left: -50px;
+            margin-top: -50px;
+            
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aprendendo position</h1>
+    <div id="container">
+        <p>Paragráfo 1</p>
+        <p id="paragrafo-fixo">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vel animi placeat cupiditate rem quia cum illum delectus facere quis? Consequatur repudiandae ratione inventore debitis deserunt quidem vel aperiam atque!
+        </p>
+        <p>Paragráfo 3</p>
+    </div>
+
+</body>
+
+</html>

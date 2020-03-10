@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário Position </title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+            border: 1px solid red;
+        }
+
+        html{
+            position: relative;
+            /* margin-top: 50px ; */
+            border: 10px solid greenyellow
+        }
+
+        body{
+            
+            position: relative;
+        }
+
+        #container{
+            position: relative;
+            border: 10px solid blue;
+        }
+
+        p {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: indigo;
+        }
+
+        #absolute{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* bottom: 0;
+            right: 0; */
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <h1>Aprendendo position</h1>
+    <div id="container">
+        <p>Paragráfo 1</p>
+        <p id="absolute"> 
+            Lorem ipsum !
+        </p>
+        <p>Paragráfo 3</p>
+    </div>
+
+</body>
+
+</html>
