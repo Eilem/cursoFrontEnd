@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form bonitão!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Bellota&display=swap');
+        /* <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">  */
+        @import url('https://fonts.googleapis.com/css?family=Bellota+Text&display=swap');
+        /* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
+
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+            font-family: 'Bellota', cursive;
+        }
+        html, body{
+            height: 100%;    
+            /* border: 10px solid black; */
+        }
+        body{
+            /* border: 10px dotted lightgoldenrodyellow; */
+            background-image: url("./background.jpg");
+            background-color: lightslategray; 
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:white; 
+            /* font-family: 'Bellota', cursive; */
+            font-family: 'Bellota Text', cursive;
+            /* font-family: 'Open Sans', sans-serif; */
+            font-size: 12px; /* e o em ?  quando usar */
+            
+        }
+
+        #form-container{
+            position: fixed;
+            left: calc(50% - 400px);
+            top: calc(50% - (350px/2));
+            width: 800px;
+            height: 350px;
+            border: 1px solid green ;
+            background-color: black;
+            opacity: 75%;
+            padding: 100px 40px;        
+        }
+       
+
+        #signup{
+            border: 1px solid yellow;
+            left: 60%;
+
+        }
+
+        form{
+            position: absolute;
+            top: -10%;
+            /* right: 40px; */
+            right: 10%;
+            width: 50%;
+            height: 120%;
+            padding: 70px 40px;
+            background-color: rgb(255, 217, 0);
+            color: gray; 
+            
+        }
+
+        form h2{
+            color:black;
+            padding: 20px 0;
+        }
+
+        .maiuscula{
+            text-transform: uppercase;
+        }
+
+        form .linha{
+            padding: 10px 0;
+            border-bottom: 1px solid grey;
+        }
+    
+        form .linha input{
+            width: 80% ;
+            height: 35px;
+            border: none;
+            border-bottom:  #e2e2e4;
+        }
+
+        .forgot-login{
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <main id="form-container">
+            <div id="signup">
+                <h1 class="maiuscula">Por quê fazer uma conta?</h1>
+                <p>Por que sim Zequinha!!</p>
+                <a href="">
+                    SIGN UP
+                </a>
+            </div>
+            <div>
+                <form action="">
+                    <h2 class="maiuscula">Log IN</h2>
+                    <div class="linha">
+                        <input type="email" name="email" id="email" placeholder="Email">  
+                        icone
+                    </div>
+
+                    <div class="linha">
+                        <input type="password" name="senha" id="senha" placeholder="Password">
+                        icone
+                    </div>
+
+                    <div class="forgot-login">
+                        <button>Esqueceu a senha?</button>
+                        <button>Log in</button>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
