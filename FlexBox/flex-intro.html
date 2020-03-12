@@ -13,31 +13,34 @@
             display: flex;
 
             /*direção do eixo principal linha ou coluna ( default: linha) */
-            flex-direction:row;
-            justify-content: space-around;
+            flex-direction:column;
+
+            /*eixo principal - direção */
+            justify-content: space-between;
+            /*eixo secundario - direção dos itens */
+            align-items: center;
 
             width: 700px;
             height: 500px;
             background-color: purple;
             margin: 0 auto;
-        }
 
+            border: 3px solid green;
+        }
+        
         /* items */
         article {
             width: 100px;
             height: 100px;
             background-color: salmon;
             color: white;
+            border: 1px solid blue;
         }
     </style>
 
 </head>
 <body>
     <section>
-        <article> 1 </article>
-        <article> 2 </article>
-        <article> 3 </article>
-
         <article> 1 </article>
         <article> 2 </article>
         <article> 3 </article>
