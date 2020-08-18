@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #005a83;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+h1{
+    font-size: 2rem;
+    color: #c1c1c1;
+}
+
+menu{
+    background-color: #fff;
+    color: #005a83;
+}
+
+nav{
+    position: fixed; /*relacionada a view port*/
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: -81%;
+
+    background-color: #ffffff;
+    font-size: 1.2em;
+    color: #005a83;
+}
+
+#nav-menu li{
+    /* margin-top: 0.5em; */
+    margin-top: 0.5em;
+}
+
+#nav-menu a {
+    text-decoration: none;
+}
+
+/* input checkbox
+~ -> para usar a propriedade irmã
+*/
+#acaoMenu:checked ~ nav{ 
+    left: 0;
+}
+
+    
+.icone {
+    position: fixed;
+    top: calc(50% - 35px) ;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    color: #c1c1c1;
+    border-radius: 0 10px  0 10px;
+}
+
+
+#btn-abre {
+    background-color: #02044b;
+    border: 1px solid #02044b;
+    z-index: 1;
+}
+
+#btn-fecha {
+    top: 10px;
+    left: auto;
+    right: calc( 20% + 10px);
+    background-color: #005a83;
+    border: 1px solid #fff;
+    margin-left: 20px;
+    z-index: 2;
+}
