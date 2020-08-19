@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#user-box{
+    font-size: 7em;
+    color: #c1c1c1
+}
+
+h1{
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+form{
+    border: solid red 1px;
+    width: 70%;
+}
+
+form .linha-form{
+    padding: 5px;
+    border: green solid 5px;
+    border-radius: 25px;
+}
+
+form .linha-form i{
+    font-size: 1.6rem;
+}
+
+form .linha-form input{
+    width: 80%;
+    height: 2rem;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}

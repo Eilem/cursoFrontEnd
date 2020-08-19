@@ -5,7 +5,11 @@
 }
 
 body{
-    background-color: #005a83;
+    /* background-color: #005a83; */
+    background-image: linear-gradient( to bottom, #026bde, #1bc1b3);
+    background-repeat: no-repeat;
+    height: 100vh; /* toma como base o tamanho da viewPort*/
+
     color: #ffffff;
     font-size: 1rem;
     font-family: 'Quicksand', sans-serif;
@@ -33,7 +37,6 @@ nav{
     font-size: 1.2em;
     color: #005a83;
     z-index: 2;
-
     
     background-color: #fff;
     border-bottom-left-radius: 80px;
@@ -41,7 +44,6 @@ nav{
     
     /* colocado em quem vai sofrer a ação */
     transition: left 0.4s, opacity 0.6s, background-color 2s, border-radius 1s;
-
 
     display: flex;
     justify-content: center;
@@ -111,4 +113,9 @@ nav a {
     z-index: 3;
     
     transition: right 0.6s;
+}
+
+
+#user-box{
+    font-size: 7em;
 }
