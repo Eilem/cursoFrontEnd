@@ -1,8 +1,16 @@
-body{
+body{ 
+    background-image: linear-gradient( to bottom, #026bde, #1bc1b3);
+    background-repeat: no-repeat;
+    height: 100vh; /* toma como base o tamanho da viewPort*/
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#btn-abre {
+    margin-top: -20%;
 }
 
 
@@ -15,27 +23,69 @@ h1{
     font-size: 1.5rem;
     margin-top: 15px;
     margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* pseudo elemento */
+form .linha-form:first-of-type{
+    background-color: #fff;
+}
+
+form .linha-form:first-of-type i{
+    color:#02044b;
+}
+
+form .linha-form:first-of-type input::placeholder{
+    color: #02044b;
 }
 
 form{
-    border: solid red 1px;
     width: 70%;
+    margin-top: 15px;
+    font-size: 1.4rem;
 }
 
 form .linha-form{
+    display: flex;
     padding: 5px;
-    border: green solid 5px;
+    border:#fff solid 1px;
     border-radius: 25px;
+    margin-bottom: 1rem;
+}
+
+form input{
+    outline: none;
+    justify-content: center; 
+    text-align: center;
 }
 
 form .linha-form i{
     font-size: 1.6rem;
 }
 
+form .linha-form #password{
+    color: #fff
+}
+
 form .linha-form input{
-    width: 80%;
+    width: 70%;
     height: 2rem;
     margin-left: 10px;
     background-color: transparent;
+    border: none;
+}
+
+form button{
+    width: 60%;
+    height: 3rem;
+    margin: 0 auto;
+    border-radius: 25px;
+    border: none;
+    background-color: #02044b;
+    color: #fff;
+}
+
+form .linha-form:last-of-type{
+    
     border: none;
 }

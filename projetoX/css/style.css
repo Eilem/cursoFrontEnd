@@ -5,11 +5,7 @@
 }
 
 body{
-    /* background-color: #005a83; */
-    background-image: linear-gradient( to bottom, #026bde, #1bc1b3);
-    background-repeat: no-repeat;
-    height: 100vh; /* toma como base o tamanho da viewPort*/
-
+    background-color: #005a83;
     color: #ffffff;
     font-size: 1rem;
     font-family: 'Quicksand', sans-serif;
@@ -116,6 +112,3 @@ nav a {
 }
 
 
-#user-box{
-    font-size: 7em;
-}
