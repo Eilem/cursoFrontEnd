@@ -1,0 +1,40 @@
+form button{
+    background-color: yellow;
+    border: none;
+    margin-top: 1rem;
+}
+
+
+form .input-form{
+    width: 60%;
+}
+
+.icon-input{
+    background-color: #fff;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-input i{
+    font-size: 1rem;;
+}
+
+
+form .icon input{
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+form input{
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 5px 5px 0;
+ 
+    height: 2rem;
+    
+    /* border-radius: ; */
+}

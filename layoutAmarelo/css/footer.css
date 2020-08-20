@@ -1,0 +1,13 @@
+footer{
+    margin-bottom: 20%;
+}
+
+.create-account {
+    background-color: transparent;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+    border: solid #ffffff 1px;
+    color: #fff;
+    margin-top: 0.5rem;
+}
