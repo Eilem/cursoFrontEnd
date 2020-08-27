@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- versão prof -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Encadeado</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Indie Flower', cursive;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        p {
+            margin-bottom: 20px;
+        }
+
+        figure {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        figure img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+        }
+
+        input,
+        button,
+        select {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            font-family: 'Indie Flower', cursive;
+            font-size: 1rem;
+        }
+
+        input,
+        select {
+            padding: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Escolha de temas</h1>
+    <h2>Tema <span id="texto-tema">light</span></h2>
+
+    <figure id="foto-box">
+        <!-- <img id="foto" src="./imagens/cachorro01.jpg" alt=""> -->
+        <img id="foto" src="" alt="">
+    </figure>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam placeat, unde tenetur excepturi recusandae
+        quam? Doloribus corporis hic assumenda? Quia vel reiciendis ducimus exercitationem ipsa fugiat harum consequatur
+        quod autem?</p>
+
+
+    <select id="escolha-tema" onchange="changeTheme()">
+        <option value="">Escolha o Tema</option>
+        <option value="blue">Blue</option>
+        <option value="dark">Dark</option>
+        <option value="yellow">Yellow</option>
+    </select>
+
+    <input type="text" id="tema" placeholder="informe o tema: black ou light">
+    <button type="button" onclick="trocarTema()">Trocar tema</button>
+
+    <script>
+        /*
+            tema: 
+                dark:
+                    fundo: black
+                    fonte : white
+                light
+                    fundo: white
+                    fonte :black 
+                yellow
+                    fundo: #dbdb04
+                    fonte : white 
+        */
+
+        function changeTheme() {
+
+            //pegar o tema escrito no select
+            let temaEscolhido = document.getElementById('escolha-tema').value;
+
+            //aplicar o css do tema escolhido
+            if (temaEscolhido == 'dark') {//dark
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = 'black';
+                tagBody.style.color = 'white';
+                document.getElementById('texto-tema').innerHTML = 'dark';
+                document.getElementById('foto').src = './imagens/cachorro01.jpg';
+
+            } else if (temaEscolhido == 'yellow') {
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = '#dbdb04';
+                tagBody.style.color = 'black';
+                document.getElementById('texto-tema').innerHTML = 'yellow';
+                //<img src="./imagens/cachorroyellow.jpg" alt="">
+                document.getElementById('foto').src = './imagens/cachorroyellow.jpg';
+
+            } else if (temaEscolhido == 'blue') {//blue
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = '#2d2d9b';
+                tagBody.style.color = 'white';
+                document.getElementById('texto-tema').innerHTML = 'blue';
+                document.getElementById('foto').src = './imagens/cachorroyellow.jpg';
+
+            } else {//light - default
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = 'white';
+                tagBody.style.color = 'black';
+                document.getElementById('texto-tema').innerHTML = 'light';
+                document.getElementById('foto').src = '';
+            }
+        }
+
+
+
+
+
+
+        function trocarTema() {
+            //pegar o tema escrito no input
+            let temaEscolhido = document.getElementById('tema').value;
+
+            //aplicar o css do tema escolhido
+            if (temaEscolhido == 'dark') {//dark
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = 'black';
+                tagBody.style.color = 'white';
+
+            } else if (temaEscolhido == 'yellow') {
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = '#dbdb04';
+                tagBody.style.color = 'black';
+
+            } else if (temaEscolhido == 'blue') {//blue
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = '#2d2d9b';
+                tagBody.style.color = 'white';
+
+            } else {//light - default
+                let tagBody = document.getElementsByTagName('body')[0];
+                tagBody.style.backgroundColor = 'white';
+                tagBody.style.color = 'black';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

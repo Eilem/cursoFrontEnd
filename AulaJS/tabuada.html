@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    
+    <h1>Estrutura de repetição- FOR</h1>
+    <h2>Ex.  Imprimir a tabuada</h2>
+    
+    <p id="erro" hidden> Erro</p>
+
+    <div id="tabuada"> 
+
+    </div>
+
+    
+    <script>
+
+        let qualTabuada = parseInt( prompt( "Digite qual a tabuada quer visualizar ? "));
+        let tabuada = '';
+
+        if( qualTabuada ){    
+            for( let i = 1; i <= 10 ; i++){
+                
+                let linha  = ` <p> ${qualTabuada} x ${i} = ${ qualTabuada * i} <p>`;
+                tabuada =  tabuada + linha +'\n';
+            }                
+            document.getElementById('tabuada').innerHTML = tabuada;
+
+        }else{ 
+            document.getElementById('erro').hidden  = false;
+            document.getElementById('erro').innerHTML = "Tabuada é obrigatória";
+        }
+
+    </script>
+</body>
+</html>

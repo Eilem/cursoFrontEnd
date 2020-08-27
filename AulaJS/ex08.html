@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Ex 08</h1>
+    <h2> salário </h2>
+    <button text="Calcular salário" type="button" onclick="calcular()">Calcular</button>
+    <section id="resultado"> 
+                      
+    </section>
+
+    <script>
+
+        function calcular() {
+            
+            let nome = prompt("Digite seu nome?");
+            let cargo = prompt("Digite seu cargo?");
+            let salario = prompt("Digite seu salário?");
+            
+            console.log(salario);
+            salario = parseFloat( salario);
+            console.log(salario);
+            
+            if( salario < 1000){
+                salario = salario * 1.10 ;
+            }else {
+                salario *=  1.05;
+            }
+
+            console.log( nome + ", " + cargo + ", " + salario );
+            console.log( "Nome: " + nome);
+            console.log( `Cargo: ${cargo}`);
+            console.log( "Novo salário: R$" + salario.toFixed(2));
+
+            let template = `
+                <article>
+                    <h3>Resultado</h3>
+                    <p>Nome: <span>${nome}</span></p>
+                    <p>Cargo: <span>  ${cargo} </span></p>
+                    <p>Salário: <span>R$ ${salario.toFixed(2)}</span></p>
+                </article> 
+            `;        
+            document.getElementById('resultado').innerHTML = template;
+        }
+
+    </script>
+</body>
+</html>

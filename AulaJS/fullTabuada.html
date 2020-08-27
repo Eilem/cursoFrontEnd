@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    
+    <h1>Estrutura de repetição- FOR</h1>
+    <h2>Ex.  Imprimir a tabuada</h2>
+    
+    <p id="erro" hidden> Erro</p>
+
+    <div id="tabuada"> 
+
+    </div>
+
+    
+    <script>
+
+        let tabuada = "";
+        let todasTabuadas = "";
+
+        for( let tabuadaAtual = 1 ; tabuadaAtual <= 10 ; tabuadaAtual ++ ){
+
+            tabuada = "Tabuada do " + tabuadaAtual + "\n";
+
+            for( let i = 1 ; i <= 10 ; i++){
+                linha  = ` <p> ${tabuadaAtual} x ${i} = ${ tabuadaAtual * i} <p>`;
+                tabuada =  tabuada + linha +'\n';
+            }  
+            todasTabuadas = todasTabuadas + tabuada;
+        }
+        document.getElementById('tabuada').innerHTML = todasTabuadas;
+        
+
+    </script>
+</body>
+</html>

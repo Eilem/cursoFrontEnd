@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    
+    <h1>Estrutura de repetição- FOR</h1>
+    <h2>Ex.  receber 15 num e imprimir na tela a soma deles</h2>
+   
+    <section id="somaNumeros"> 
+        <p id="pNum" hidden>Números recebidos : 
+            <span  id="numRecebidos"> </span> 
+        </p>
+        <p id="pSoma" hidden>Somatória dos números : 
+            <span  id="somaTotal" > </span> 
+        </p>
+    </section>
+
+    
+    <script>
+
+        let soma = 0;
+        let  numRecebidos = ''; 
+        let qtdNum = parseInt( prompt( "Digite a qtd de números á digitar"));
+
+        console.log(qtdNum);
+        
+        if( !qtdNum ){
+            qtdNum = 5;
+        }
+        
+        for( let count = 1 ;  count <= qtdNum ; count ++ ){
+
+            if( count == 1 ){
+                num = parseInt( prompt( "Digite o 1° número") );
+                numRecebidos =  '' + num;
+                soma = soma + num;
+            
+            }else{
+                num = parseInt( prompt( `Digite o ${count}° número`) );
+                numRecebidos =  numRecebidos + ', ' + num ;
+                 
+                soma = soma + num;
+            }
+
+        }
+        console.log( "Números recebidos : " + numRecebidos );
+        console.log( "Somatória dos números : " + soma);
+        
+        alert( "Números recebidos : " + numRecebidos + "\n" + "Somatória dos números : " + soma);
+
+
+
+        document.getElementById('pNum').hidden  = false;
+        document.getElementById('numRecebidos').innerHTML  = numRecebidos;
+
+        document.getElementById('pSoma').hidden  = false;
+        document.getElementById('somaTotal').innerHTML = soma;
+
+    </script>
+</body>
+</html>

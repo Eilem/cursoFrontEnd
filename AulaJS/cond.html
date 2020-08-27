@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Ex 01</h1>
+    <h2> Receber idade em anos e imprimir Meses, Dias Horas e min </h2>
+
+    <script>
+
+        let idade = prompt("Qual a sua idade?");
+        
+        let idadeMeses = idade * 12;
+        let idadeDias = idade * 365;
+        let idadeHoras =  idadeDias * 24 ;
+        let idadeMinutos = idadeHoras *360 ;
+
+        console.log( "Sua idade atual é: " + idade );
+        console.log( "Sua idade atual em meses 1é: " + idadeMeses );
+        console.log( "Sua idade atual em dias é: " + idadeDias  );
+        console.log( "Sua idade atual em horas é: " + idadeHoras);
+        console.log( "Sua idade atual  em minutos é: " + idadeMinutos );
+        
+
+    </script>
+</body>
+</html>
