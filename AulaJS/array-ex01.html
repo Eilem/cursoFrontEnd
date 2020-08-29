@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Nomes</title>
+
+    <style>
+
+        *{
+            font-family:  Helvetica, sans-serif;
+        }
+
+        #pessoas ul {
+            list-style-type:none;
+            text-transform: capitalize;
+        }
+        
+        #pessoas ul li:nth-child(even){
+            background: #c1c1c1;
+        }
+        
+        #pessoas ul li:nth-child(odd){
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="nome">Nome</label>
+        <input type="text" name="" id="nome">
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="exibirPessoas()">Exibir pessoas</button>
+    </form>
+    <section id="pessoas">
+        <ul id="listaPessoas"></ul>
+    </section>
+   
+    <!--  -->
+    <script>
+
+        let pessoas = [];
+
+        function cadastrar() {
+            event.preventDefault();
+            let nome = document.getElementById('nome').value;
+            pessoas.push(nome);
+            console.log(pessoas);
+        }
+
+
+        function exibirPessoas() {
+
+            event.preventDefault();
+            
+            let paragrafos = '';
+
+            for( let i = 0 ; i < pessoas.length ; i ++  ){
+
+                console.log(paragrafos);
+                paragrafos = paragrafos + "<li>" + pessoas[i] + "</li>";
+            }
+
+            document.getElementById('listaPessoas').innerHTML = paragrafos;
+        }
+
+    </script>
+
+</body>
+
+</html>

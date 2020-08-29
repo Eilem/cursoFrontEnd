@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <ul id='myfruits'></ul>
+    
+    <!--  -->
+    <script>
+        let frutas = [];
+        // frutas[0] = 'maça';
+        // frutas[1] = 'banana';
+        // frutas[2] = 'kiwi';
+
+        frutas.push('maça');
+        frutas.push('banana');
+        frutas.push('kiwi');
+
+        let itens = '';
+
+        for( let i = 0 ; i < frutas.length; i ++){
+            itens += `<li>${frutas[i]}</li>`;
+        }
+
+        // itens += `<li>${frutas[0]}</li>`;
+        // itens += `<li>${frutas[1]}</li>`;
+        // itens += `<li>${frutas[2]}</li>`;
+        document.getElementById('myfruits').innerHTML = itens;
+
+
+    </script>
+
+</body>
+
+</html>
