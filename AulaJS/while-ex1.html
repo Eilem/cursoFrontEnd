@@ -10,6 +10,8 @@
     <input type="text" name="qtd" id="qtd" required="required">
     <button onclick="rodarPrograma()"> Rodar </button>
     <ul id="lista"></ul>
+
+    <div id="par-impar"></div>
    
     <script>
 
@@ -22,8 +24,11 @@
 
         function rodarPrograma(params) {
             let qtd = parseInt( document.getElementById('qtd').value); 
+            let pares = ''; 
+            let impares = ''; 
             
             if( !recebeuQtd(qtd)){
+                
                 alert('Quantidade é obrigatória');
 
                 // @todo 
@@ -32,6 +37,7 @@
             }else{
 
                 document.getElementById('lista').innerHTML = '<li> Quantidade de números  '+ qtd +'</li>' ;
+                document.getElementById('lista').innerHTML += '<hr/>' ;
                 let count = 1 ;
                 while ( count <= qtd) {
                     let num = parseInt( prompt('Digite ' + count + ' número '));
@@ -45,15 +51,28 @@
 
                         document.getElementById('lista').innerHTML += '<li> Vez: ' + count + ' número digitado foi: ' + num + '</li>' ;
                         alert(" o Número deve ser par!");
-                        num = parseInt( prompt('Digite ' + count + ' número '));
-                        if( isNaN(num)){
-                            continue;
-                        }
-                    }
 
+                        num = parseInt( prompt('Digite ' + count + ' número '));
+                        
+                        if( isNaN(num)){
+
+                            //  @todo corrigit bug , 
+                            // está passando a partir da segunda tentativa
+                           
+                            alert('Número é obrigatória');
+
+                        }
+                        impares += num + ' - ';
+                    }
+                    
                     document.getElementById('lista').innerHTML += '<li> Vez: '+ count + ' número digitado foi:' + num + '</li>' ;
+                    
+                    pares += num + ' - ';
                     count ++;
                 }
+
+                document.getElementById('par-impar').innerHTML = '<p> Números pares digitados: ' +  pares + '</p>';
+                document.getElementById('par-impar').innerHTML += '<p>  Números ímpares digitados: ' + impares + '</p>';
                             
             }
 
