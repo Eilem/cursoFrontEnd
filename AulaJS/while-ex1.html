@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    
+    <input type="text" name="qtd" id="qtd" required="required">
+    <button onclick="rodarPrograma()"> Rodar </button>
+    <ul id="lista"></ul>
+   
+    <script>
+
+        function recebeuQtd( qtd) {
+            if( isNaN(qtd) ){
+               return false; 
+            }
+            return true
+        }
+
+        function rodarPrograma(params) {
+            let qtd = parseInt( document.getElementById('qtd').value); 
+            
+            if( !recebeuQtd(qtd)){
+                alert('Quantidade é obrigatória');
+
+                // @todo 
+                // tratar condição de quantidade para nÃO RECEBIDA. manter  o campo para digitação
+
+            }else{
+
+                document.getElementById('lista').innerHTML = '<li> Quantidade de números  '+ qtd +'</li>' ;
+                let count = 1 ;
+                while ( count <= qtd) {
+                    let num = parseInt( prompt('Digite ' + count + ' número '));
+
+                 // @todo tratar caso não receba numero
+                    if( isNaN(num)){
+                        continue;
+                    }
+
+                    if( num % 2 != 0) {
+
+                        document.getElementById('lista').innerHTML += '<li> Vez: ' + count + ' número digitado foi: ' + num + '</li>' ;
+                        alert(" o Número deve ser par!");
+                        num = parseInt( prompt('Digite ' + count + ' número '));
+                        if( isNaN(num)){
+                            continue;
+                        }
+                    }
+
+                    document.getElementById('lista').innerHTML += '<li> Vez: '+ count + ' número digitado foi:' + num + '</li>' ;
+                    count ++;
+                }
+                            
+            }
+
+            alert('Fim');
+        }
+
+
+        function testaNum() {
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

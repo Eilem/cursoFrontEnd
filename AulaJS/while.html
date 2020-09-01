@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    
+    <input type="text" name="qtd" id="qtd">
+    <button onclick="rodarPrograma()"> Rodar </button>
+
+    <ul id="lista"></ul>
+   
+
+    <script>
+
+        function rodarPrograma(params) {
+
+            let qtd = parseInt( document.getElementById('qtd').value);
+           
+            let count = 1 ;
+
+            document.getElementById('lista').innerHTML = '<li> Quantidade de vezes '+ qtd +'</li>' ;
+            while ( count <= qtd) {
+                document.getElementById('lista').innerHTML += '<li> Vez: '+ count +'</li>' ;
+                count ++;
+            }
+            alert('Fim');
+        }
+
+    </script>
+
+</body>
+
+</html>
