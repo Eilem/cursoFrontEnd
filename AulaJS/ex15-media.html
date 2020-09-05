@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    
+    <h1>Exercício</h1>
+    <h2>Calcular média</h2>
+   
+    <section id="somaNumeros"> 
+        <p id="pNotas" hidden>Notas recebidos : 
+            <span  id="notasRecebidas"> </span> 
+        </p>
+        <p id="pMedia" hidden>Média das notas</p> : 
+            <span  id="media" > </span> 
+        </p>
+    </section>
+
+    
+    <script>
+
+        let media = 0;
+        let  notasRecebidas = ''; 
+        let qtdNotas = parseInt( prompt( "Digite a quantidade de notas que irá interir"));
+
+        console.log(qtdNotas);
+        
+        if( !qtdNotas ){
+            qtdNotas = 4;
+        }
+        
+        for( let count = 1 ;  count <= qtdNotas ; count ++ ){
+
+            if( count == 1 ){
+                let nota = parseFloat( prompt( "Digite a 1 ª nota ") );
+                notasRecebidas =  '' + nota;
+                media = media + nota;
+            
+            }else{
+                let nota = parseFloat( prompt( `Digite o ${count}ª nota`) );
+                notasRecebidas =  notasRecebidas + ', ' + nota ;
+                 
+                media = media + nota;
+            }
+
+            media = media / qtdNotas;
+
+        }
+        console.log( "Números recebidos : " + notasRecebidas );
+        console.log( "Média das notas : " + media);
+        
+        document.getElementById('pNum').hidden  = false;
+        document.getElementById('notasRecebidas').innerHTML  = notasRecebidas;
+
+        document.getElementById('pMedia').hidden  = false;
+        document.getElementById('media').innerHTML = media;
+
+    </script>
+</body>
+</html>

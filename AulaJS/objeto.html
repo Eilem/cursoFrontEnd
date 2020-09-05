@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+
+    <style>
+        div #dados {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="dados">
+        <label for="">Nome: <span id="nome">? </span></label>
+    </div>
+    
+    <div id="dados">
+        <label for="">Sobrenome: <span id="sobrenome">? </span></label>
+    </div>
+    
+    <div id="dados">
+        <label for="">Nome completo: <span id="nome-completo">? </span></label>
+    </div>
+    
+    <div id="dados">
+        <label for="">Idade: <span id="idade">? </span></label>
+    </div>
+    
+    <!--  -->
+    <script>
+        let joana = {
+            nome: "Joana",
+            sobrenome: "Dark",
+            idade: "200",
+        };
+
+        document.getElementById('nome').innerHTML = joana.nome;
+        document.getElementById('sobrenome').innerHTML = joana.sobrenome;
+        document.getElementById('nome-completo').innerHTML = joana.nome + " " + joana.sobrenome;
+        document.getElementById('idade').innerHTML = joana.idade;
+
+    </script>
+
+</body>
+
+</html>

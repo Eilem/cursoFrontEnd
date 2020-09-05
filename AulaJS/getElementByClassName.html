@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-nr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Get element by class</h1>
+        
+        <ul>
+            <li class="corsim"> item 1</li>
+            <li class="cornao"> item 2</li>
+            <li class="corsim"> item 3</li>
+            <li class="cornao"> item 4</li>
+        </ul>
+
+        <button onclick="testar();">Testar</button>
+
+        <script>
+            function testar() {
+                let lista = document.getElementsByClassName('cornao');
+                console.log(lista);
+            }
+        </script>
+    </body>
+</html>

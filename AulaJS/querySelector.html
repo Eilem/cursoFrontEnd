@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-nr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            li{
+                color: tomato;
+            }
+
+            ul li:first-of-type{
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Query selector</h1>
+        
+        <ul>
+            <li class="branco"> item 1</li>
+            <li class="verde"> <b>item 2</b></li>
+            <li class="branco"> item 3</li>
+            <li class="verde"> item 4</li>
+        </ul>
+    
+        <button onclick="testar();">Testar</button>
+
+        <script>
+            function testar() {
+                let lista = document.querySelectorAll('ul li:first-of-type');
+                console.log(lista);
+
+                let unicoItem = document.querySelector('li');
+                let listaCompleta = document.querySelectorAll('li');
+                let primeiroItem = document.querySelector('li:first-of-type');
+                let ultimoItem = document.querySelector('ul li:last-of-type');
+                
+
+
+                console.log(unicoItem);
+                console.log(listaCompleta);
+                console.log(primeiroItem);
+                console.log(ultimoItem);
+            }
+        </script>
+    </body>
+</html>

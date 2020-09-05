@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de salários</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            
+        } */
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Calculadora de Salários</legend>
+            <input type="text" id="cargo" placeholder="informe o cargo">
+            <input type="number" id="salario" placeholder="informe o salário">
+            <button type="button" onclick="calcular()">Calcular</button>
+        </fieldset>
+    </form>
+
+    <script>
+        function calcular() {
+            let cargo = document.getElementById('cargo').value;
+            let salario = parseFloat(document.getElementById('salario').value);
+
+            if (!cargo) {
+                alert(`Cargo inexistente`);
+            }
+
+            if (cargo == 'producao') {
+                salario = reajustarSalario(salario, 6.5);
+
+            } else if (cargo == 'adm') {
+                salario = reajustarSalario(salario, 7.5);
+
+            } else if (cargo == 'diretoria') {
+                salario = reajustarSalario(salario, 12);
+            }
+
+            alert(`salário reajustado para R$${salario.toFixed(2)}`);
+        }
+
+
+        function reajustarSalario(salario, percentual) {
+            return salario + (salario / 100 * percentual);
+        }
+    </script>
+</body>
+
+</html>

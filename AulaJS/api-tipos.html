@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>api</title>
+
+        <style>
+            body {
+                font-size: 1.5rem;
+
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                /* justify-content: right;
+                align-items: right; */
+            }
+
+            form #box {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin-left: 25%;
+                margin-bottom: 1rem;
+            }
+
+            form input {
+                height: 2rem;
+            }
+
+            #label-nome {
+                /* justify-content: left; */
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <form action="">
+            <div id="box">
+                <input type="text" name="nome" id="nome" onkeyup="gerarSombra()" autocomplete="off" placeholder="Nome" title="Nome">
+                <label for="input-nome" id="label-nome"></label>
+                <label for="input-nome" id="label-nome-qtd"></label>
+
+            </div>
+            <div id="box">
+                <input type="text" name="username" id="username" onkeyup="gerarSombra()" autocomplete="off" placeholder="usuario" title="Username">
+                <label for="input-username" id="label-username"></label>
+                <label for="input-username" id="label-username-qtd"></label>
+            </div>
+            <div id="box">
+                <input type="email" name="email" id="email" onkeyup="gerarSombra()" placeholder="email@dominio.com" title="E-mail">
+                <label for="input-email" id="label-email"></label>
+                <label for="input-email" id="label-email-qtd"></label>
+            </div>
+        </form>
+    </body>
+
+    <script>
+        function gerarSombra() {
+
+            //nome
+            let nome = document.getElementById('nome').value;
+            gerarSombraTexto("label-nome", nome);
+            exibeTamanhoString("label-nome-qtd", nome);
+            
+            let username = document.getElementById('username').value;
+            gerarSombraTexto("label-username", username);
+            exibeTamanhoString("label-username-qtd", username);
+            
+
+            if( limitarDigitacaoMax( 15, username) ){
+
+                console.log("ta em baixo");
+                console.log(username.substring(0,15));
+                console.log("console do if");
+                
+                document.getElementById("usename").value = username.substring( 0,15 );
+            }
+            
+
+            let email = document.getElementById('email').value;
+            gerarSombraTexto("label-email", email);
+            exibeTamanhoString("label-email-qtd", email);
+        }
+
+        /*
+         * VERIFICA SE ALCANÇOU A QTD MAXIMA DE caracateres para digitação 
+         */
+        function limitarDigitacaoMax(qtdMax, field) {
+
+            if( field.length < qtdMax){
+                console.log("menor q max");
+                return false;
+
+            }else{
+                //alcançou maximo
+                console.log( field.substring(0,qtdMax));
+                console.log("maior q max");
+                return true;
+            }
+        }
+
+        /**
+         * Exibir sombra do input
+         */
+        function gerarSombraTexto( label, field) { 
+            document.getElementById(label).innerHTML = field;
+        }
+
+
+        /**
+         * Exibe qtd digitada 
+         */
+        function exibeTamanhoString( labelQtd , field) {
+            if( field.length > 0){
+                document.getElementById(labelQtd).innerHTML = field.length;
+            }
+        }
+
+    </script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Cadastro IMC</h1>
+
+    <title>Cadastro</title>
+    <form  id="formIMC" action="">
+        <input id="nome" type="text" name="Nome" title="Nome" placeholder="Nome">
+        <input id="altura" type="number" name="Altura" title="Altura" placeholder="Altura em metrios ex.: 1.67">
+        <input id="peso" type="number" name="Peso" title="Peso" placeholder="Peso em Qquilos">
+        <div id="button-form">
+            <button id="btn-calcularIMC" type="button" onclick="calcularIMC()">Calcular</button>
+            <button id="limpar" type="reset">Limpar</button>
+        </div>
+    </form>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>IMC</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        <tbody id="resultados">
+           
+        </tbody>
+    </table>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

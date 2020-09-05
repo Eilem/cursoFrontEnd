@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Aplicação</title>
+</head>
+<body>
+    <h1>Programa de números pares</h1>
+    <label for="">Quantos números pares você que digitar?</label>
+    <input type="text" id="qtd-vezes"><br>
+    <button onclick="rodarPrograma()">Rodar Programa</button>
+    <div id="par-impar"></div>
+    <script>
+
+    // Faça um programa que pergunte para o usuário a quantidade de números que ele quer digitar. Após isso crie um laço que exiba o número que o usuário digitar apenas se for PAR. Utilize a estrutura WHILE.
+        function rodarPrograma() {
+
+            let qtd = document.getElementById('qtd-vezes').value;//3
+            let inicio = 1;
+            let pares = '';
+            let impares = '';
+
+            while ( inicio <= qtd ) {//true
+                // break;//para o laço de repetição while
+                // continue;//continua o laço sem 
+                // let numeroDigitado = prompt(`Digite o ${inicio}o número par`) ;
+
+                // //número vazio
+                // if( numeroDigitado == '') {
+                    //     continue;
+                    // }
+                    
+                let numeroDigitado = parseInt( prompt(`Digite o ${inicio}o número par`) );
+                if( Number.isNaN(numeroDigitado) ) {//NaN ???
+                    continue;
+                }
+                
+                //exibir o número se for par
+                if ( numeroDigitado % 2 == 0 ) {//par? false
+                    pares += `${numeroDigitado} `;
+                    alert(`Número par digitado é : ${numeroDigitado}` );
+                    inicio++;
+                } else {
+                    impares += `${numeroDigitado} `;
+                    alert('Só aceitamos números pares!!!');
+                }
+            }//fim do while
+
+            document.getElementById('par-impar').innerHTML = pares + impares;
+
+        }    
+    </script>
+</body>
+</html>

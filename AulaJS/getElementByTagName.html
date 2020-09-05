@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-nr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Get element by class</h1>
+        
+        <ul>
+            <li class="branco"> item 1</li>
+            <li class="verde"> <b>item 2</b></li>
+            <li class="branco"> item 3</li>
+            <li class="verde"> item 4</li>
+        </ul>
+        <ol>
+            <li class="branco"> item 1</li>
+            <li class="verde"> item 2</li>
+            <li class="branco"> item 3</li>
+            <li class="verde"> item 4</li>
+        </ol>
+
+        <button onclick="testar();">Testar</button>
+
+        <script>
+            function testar() {
+                let lista = document.getElementsByTagName('li');
+                console.log(lista);
+
+                console.log(lista[1].innerHTML);
+                console.log(lista[1].innerText);
+
+            }
+        </script>
+    </body>
+</html>
