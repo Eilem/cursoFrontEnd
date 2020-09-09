@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let e Const</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="">
+        <label for="cor">Cor</label>
+        <input type="text" name="cor" id="cor">
+        <button onclick="cadastrarCor()">Cadastrar Cor</button>
+        <button onclick="exibirCores()">Exiir Cor</button>
+    </form>
+    <h3>Cores</h3>
+    <ul id="cores"></ul>
+    
+    <script>
+        let cores = [ ];
+        
+        function cadastrarCor() {
+            event.preventDefault();
+            let cor = document.querySelector('#cor').value;
+            if( cor != ''){
+                cores.push(cor);
+            }
+            
+            console.log(cores);            
+        }
+
+        // function gerarLista(){
+        //     let lista = cores.map( function( corAtual){
+        //         return  `<li>${ corAtual}</li>`;
+        //      });
+        // }
+
+
+        function exibirCores() {
+
+            event.preventDefault();
+            let lista = cores.map( function( corAtual){
+                return  `<li>${ corAtual}</li>`;
+             });
+           
+
+            for (let i = 0; i < lista.length; i++) {
+               document.getElementById('cores').innerHTML += lista[i];
+    
+            }
+        }
+    </script>
+</body>
+</html>

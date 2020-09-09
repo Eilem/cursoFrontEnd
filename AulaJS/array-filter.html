@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array filter</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <form action=""></form>
+        <label>Nome</label>
+        <input type="text" name="nome" id="nome">
+        <button onclick="buscar()">Buscar</button>
+
+        <div id="localizados"></div>
+
+    <script>
+        
+        let nomes = [ "Dedé" , "Didi" , "Mussum", "Zacarias" ];
+        
+        // let procurado = nomes.filter( function(item ){
+        //     return item == "Zacarias" || item == "Didi";
+        // });
+        
+        // let procurado = nomes.filter( function(item ){
+        //     return item.indexOf('i') >= 0;
+        // });
+        // console.log(procurado);
+
+
+        function buscar() {
+            
+            let localizarNome = document.getElementById('nome').value;
+
+            let existeNome = nomes.filter( function( item ){
+                return item.indexOf(localizarNome) >= 0;
+            });
+
+            let localizados = '<p> O resultado da sua busca foi: </p>';
+            if( existeNome.length > 0 ){
+
+
+                for (let i = 0; i < existeNome.length; i++) {
+
+                    localizados += "<p>" + existeNome[i] + "</p>";
+                }
+
+            }else{
+
+                localizados += "<p style='color: red'> Nenhum registro encontrado</p>";  
+            }
+            //exibir na view
+            document.getElementById('localizados').innerHTML = localizados;
+        }
+       
+    </script>
+</body>
+</html>
