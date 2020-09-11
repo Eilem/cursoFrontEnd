@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>API</title>
+    </head>
+
+    <body>
+        <form action="">
+            <button onclick="cadastrarIMC()">Cadastrar IMC</button>
+            <button onclick="exibirTodos()">Exibir Todos</button>
+        </form>
+
+        <script>
+            const url = "https://react-eduardocosta-api.herokuapp.com/api/imc";
+
+            //post
+            function cadastrarIMC() {
+
+                event.preventDefault();
+
+                //dados da pessao
+                let dadosPessoa = {
+                    nome:  "didi",
+                    peso:  65,
+                    altura: 1.65,
+                    IMC: 33
+                };
+
+                fetch(
+                    url , {
+                    method: "POST",
+                    body: JSON.stringify(dadosPessoa),
+                    mode: 'cors',
+                    headers:{
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then( function( retorno ){
+                    return retorno.json();
+
+                } ).then( function(dados){
+                    getAll();
+                });
+            }
+
+            
+            //GET all
+            function exibirTodos() {
+                event.preventDefault();
+                getAll(); 
+            }
+
+
+            //GET all
+            function getAll() {
+                
+                let template = [];
+
+                fetch(
+                    url , {
+                    method: "GET",
+                    mode : 'cors',
+                    headers:{
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then( function( retorno ){
+
+                    console.log(retorno.status);
+                    
+                    return retorno.json();
+
+
+                } ).then( function(dados){
+                    let lista =  dados.docs;
+
+                    for (let i = 0; i < lista.length; i++) {
+                        template += "<p>" + lista[i].nome + "</p>" ;
+                        
+                    }
+                    document.body.innerHTML  += template;
+
+                }).catch( function(erros) {
+
+                    console.log("o erro");
+                    console.log(erros);
+                    console.log("quale");
+
+                    template +=  "<p> Lista indisponivel  no momento </p>" ;
+                    document.body.innerHTML  += template;
+                        
+                });
+
+                
+            }
+
+        </script>
+    </body>
+</html>
